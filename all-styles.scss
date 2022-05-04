@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Page's styles
+@import "./styles/main-page";
+@import "./styles/legal-entities";
+@import "./styles/header";
+@import "./styles/footer";
+
+.body {
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 1000px) {
+  container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}

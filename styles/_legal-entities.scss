@@ -1,0 +1,146 @@
+@import "./vars";
+
+$color__blue: #e3ecff;
+$color__black: #000000;
+$color__white: #ffffff;
+$color__dark-grey: #616161;
+
+// Breadcrumb---------------------------------
+
+.breadcrumbs {
+  //   margin-top: 0;
+  //   margin-left: 0;
+
+  &__menu {
+    padding: 21px 0 40px;
+    display: flex;
+    list-style: none;
+  }
+
+  &__item:not(:last-of-type)::after {
+    content: ">";
+    margin: 0 3px;
+    color: $color__dark-grey;
+  }
+
+  &__link {
+    font-family: $ff-rubik;
+    font-style: normal;
+    font-weight: $fw-regular;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color__dark-grey;
+    text-decoration: none;
+  }
+
+  &__link--active {
+    font-weight: $fw-medium;
+  }
+}
+
+// LEGAL-blc
+.legal-entities {
+  &__title {
+    font-family: $ff-rubik;
+    font-style: normal;
+    font-weight: $fw-bold;
+    font-size: 40px;
+    line-height: 41px;
+
+    color: $color__black;
+  }
+
+  &__txt {
+    padding: 38px 0 40px;
+    font-family: $ff-rubik;
+    font-style: normal;
+    font-weight: $fw-regular;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: $color__black;
+  }
+}
+
+.legal-programs {
+  padding: 29px 0 58px;
+  background-color: $color__blue;
+
+  &__title {
+    padding-left: 28px;
+    margin-bottom: 24px;
+    font-family: $ff-roboto;
+    font-style: normal;
+    font-weight: $fw-bold;
+    font-size: 24px;
+    line-height: 41px;
+  }
+
+  &__accordion {
+    padding: 18px 25px;
+    background-color: $color__white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__accordion + &__accordion {
+    margin-top: 24px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    cursor: pointer;
+
+    font-family: $ff-inter;
+    font-style: normal;
+    font-weight: $fw-bold;
+    font-size: 18px;
+    line-height: 120%;
+
+    color: $color__black;
+
+    &::after {
+      content: "";
+      display: block;
+
+      width: 9px;
+      height: 9px;
+      border-top: 2px solid $color__dark-grey;
+      border-right: 2px solid $color__dark-grey;
+
+      position: absolute;
+      top: 40%;
+      right: 5px;
+      transform: rotate(45deg);
+
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  .active-legal {
+    &::after {
+      transform: rotate(134deg);
+    }
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  &__desc {
+    padding-top: 18px;
+    font-family: $ff-inter;
+    font-style: normal;
+    font-weight: $fw-regular;
+    font-size: 18px;
+    line-height: 140%;
+
+    color: $color-text-vol;
+  }
+}

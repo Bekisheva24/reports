@@ -1,0 +1,157 @@
+@import "./vars";
+
+.footer {
+  background-color: $color__violet;
+  margin-top: 90px;
+  position: relative;
+  justify-content: center;
+
+  &::after {
+    content: "";
+    width: 93%;
+    height: 10%;
+    background-image: url("/assets/main/beforefooter.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 79px;
+    top: calc(50% - 17.5rem);
+  }
+
+  &__logo img {
+    width: 255px;
+    height: 86px;
+    margin-bottom: 17px;
+  }
+
+  &__social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item + &__item {
+    margin-left: 20.5px;
+  }
+
+  &__item-facebook {
+    margin-left: 11.5px !important;
+  }
+
+  &__text {
+    font-family: $ff-rubik;
+    font-style: normal;
+    font-weight: $fw-medium;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: $color__white;
+    margin-bottom: 40px;
+  }
+
+  &__social-title {
+    font-family: $ff-roboto;
+    font-style: normal;
+    font-weight: $fw-medium;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color__white;
+    margin-bottom: 9px;
+  }
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 65px 0;
+
+  &__rightside {
+    display: flex;
+  }
+}
+
+.footer-rightside {
+  &__title {
+    font-family: $ff-rubik;
+    font-style: normal;
+    font-weight: $fw-bold;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: $color__white;
+    padding-top: 27px;
+    margin-bottom: 35px;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__item {
+    padding-left: 0;
+    font-family: $ff-rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color__white;
+    padding-left: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $ff-rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color__white;
+    padding-left: 0;
+  }
+
+  &__requisite {
+    font-family: $ff-rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color__white;
+  }
+}
+
+.requisites__item {
+  margin-bottom: 5px;
+}
+
+.contacts {
+  margin-left: 82px;
+}
+
+.info {
+  margin-left: 20px;
+}
+
+.info-item {
+  margin-bottom: 7px;
+}
+
+.contact-info {
+  margin-bottom: 10px;
+}
+
+.contact-phone a {
+  display: flex;
+}
+
+.footer-geo,
+.footer-gmail,
+.footer-phone {
+  margin-right: 12px;
+  margin-top: 5px;
+}
+
+.footer-gmail {
+  position: relative;
+  top: 5px;
+}
